@@ -1,0 +1,24 @@
+{
+    "name": "dennis-de-swart/php-stanford-nlp-datastore",
+    "type": "library",
+    "description": "Stores NLP data from Stanford CoreNLP server.",
+    "keywords": ["stanford","nlp","named entity","coreference","openie", "natural language"],
+    "homepage": "https://github.com/DennisDeSwart/PHP-Stanford-NLP-Datastore",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dennis de Swart",
+            "email": "dennis@dennisdeswart.nl",
+            "homepage": "http://www.dennisdeswart.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+         "php": ">=5.3",        
+        "dennis-de-swart/php-stanford-corenlp-adapter": "*",
+        "doctrine/dbal": "*"
+    },
+    "autoload": {
+    	"classmap": ["src/"]
+    }
+}

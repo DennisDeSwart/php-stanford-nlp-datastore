@@ -1,0 +1,22 @@
+{
+    "name": "dennis-de-swart/php-stanford-corenlp-adapter",
+    "type": "library",
+    "description": "PHP adapter for use with Stanford CoreNLP tools 3.6.0",
+    "keywords": ["stanford","nlp","ner","pos","parser"],
+    "homepage": "https://github.com/DennisDeSwart/PHP-stanford-corenlp-adapter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dennis de Swart",
+            "email": "dennis@dennisdeswart.nl",
+            "homepage": "http://www.dennisdeswart.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+    	"classmap": ["src/"]
+    }
+}
