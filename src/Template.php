@@ -90,7 +90,16 @@ class Template {
         This file is called "datastore.db". Each time you submit a text, it adds the results to the database file.<br /> 
         The results can be become very long. If you check the box, the database is emptied.</li>
     </ul>
-    
+    <h3>How to use the form</h3>
+    <div> 
+        <ul>
+            <li>Try typing this text in the textbox: "John meets Mary at the restaurant at 7pm. He orders a drink for her."</li>   
+            <li>Now press "Submit"</li>
+            <li>See the results on the screen</li>
+            <li>Now click the Search button. Try typing "Mary" in the search box</li>
+            <li>You now see the results for the word "Mary"</li>
+        </ul
+    </div>
     <h3>"Datastore" looks for three sets of data:</h3>
     <div> 
         <ul>

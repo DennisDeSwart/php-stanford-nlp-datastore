@@ -88,8 +88,12 @@ You can install the adapter by putting the following line into your composer.jso
 
 ## Example output
 
-See "example_output.PNG"
+See 
+- "datastore_result_a.PNG"
+- "datastore_result_b.PNG"
+- "datastore_result_search.PNG"
 
+and "example.db", this is how a filled database looks like
 
 ## Any questions?
 
