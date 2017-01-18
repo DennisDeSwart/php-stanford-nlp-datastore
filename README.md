@@ -36,14 +36,6 @@ https://github.com/sqlitebrowser
 - There is also a search form to find data
 
 
-## How to install
-
-- First: install Stanford CoreNLP Server, follow the links above for details
-- Second: move the "bootstrap.php" and "index.php" file from the package directory, to the document_root
-
-After moving you should be able to see the form, see example_form.PNG.
-
-
 ## This package depends on Stanford CoreNLP Server
 
 ```
@@ -55,6 +47,18 @@ http://stanfordnlp.github.io/CoreNLP/index.html#download
 ```
 https://github.com/DennisDeSwart/php-stanford-corenlp-adapter
 ```
+
+
+## How to install
+
+- Install Stanford CoreNLP Server. You can find instructions on how to install in the links above
+- Copy the following files from "vendor/dennis-de-swart/php-stanford-nlp-datastore" to your Document_Root:
+* "bootstrap.php"
+* "index.php"
+* "index.js"
+* "datastore.db"
+
+After moving you should be able to see the form, see example_form.PNG.
 
 
 ## Requirements
