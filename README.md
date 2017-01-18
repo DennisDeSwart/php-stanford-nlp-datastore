@@ -48,30 +48,18 @@ http://stanfordnlp.github.io/CoreNLP/index.html#download
 https://github.com/DennisDeSwart/php-stanford-corenlp-adapter
 ```
 
+Note: since this package contains a full version of the CoreNLP Adapter, you can use all of it's features with this package.
 
-## How to install
+
+## How to install the ZIP files
 
 - Install Stanford CoreNLP Server. You can find instructions on how to install in the links above
-- Copy the following files from "vendor/dennis-de-swart/php-stanford-nlp-datastore" to your Document_Root:
-* "bootstrap.php"
-* "index.php"
-* "index.js"
-* "datastore.db"
-
-After moving you should be able to see the form, see example_form.PNG.
+- Unpack the files and copy them to your webserver directory.
 
 
-## Requirements
-- PHP 5.3 or higher: it also works on PHP 7
-- Java SE Runtime Enviroment, version 1.8
-- Stanford CoreNLP Server 3.7.0
-- PHP-Stanford-CoreNLP-Adapter => already included using Composer
-- Windows or Linux/Unix 64-bit OS, 8Gb or more memory recommended.
+## Install using Composer 
 
-
-## Installation using Composer 
-
-You can install the adapter by putting the following line into your composer.json and running a composer update
+Add the following line to the "require" section of "composer.json" and run a composer update
 
 ```
     {
@@ -80,6 +68,23 @@ You can install the adapter by putting the following line into your composer.jso
         }
     }
 ```
+
+
+Copy the following files from "vendor/dennis-de-swart/php-stanford-nlp-datastore" to your webserver folder:
+* "bootstrap.php"
+* "index.php"
+* "index.js"
+* "datastore.db"
+
+After moving these files you should be able to see the form, see "datastore_result_a.PNG".
+
+
+## Requirements
+- PHP 5.3 or higher: it also works on PHP 7
+- Java SE Runtime Enviroment, version 1.8
+- Stanford CoreNLP Server 3.7.0
+- PHP-Stanford-CoreNLP-Adapter => already included using Composer
+- Windows or Linux/Unix 64-bit OS, 8Gb or more memory recommended.
 
 
 ## Important notes
