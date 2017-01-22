@@ -93,8 +93,8 @@ https://github.com/guzzle/guzzle
 ```
 
 - Run a Composer update to install the dependencies
-- Copy these files from "/vendor/dennis-de-swart/php-stanford-nlp-datastore" to your webserver directory. Usually "htdocs" or "var/www".
 ``` 
+Copy these files from "/vendor/dennis-de-swart/php-stanford-nlp-datastore" to your webserver directory. Usually "htdocs" or "var/www".
 - datastore.db
 - bootstrap.php
 ```
