@@ -16,7 +16,7 @@ class Relation {
             'openieId'  => $openieId,
             'wordId'    => $wordId,
         ));  
-        
-        return $this->conn->lastInsertId();;
+       
+        return $this->conn->lastInsertId();
     }
 }

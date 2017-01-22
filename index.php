@@ -11,6 +11,7 @@
      */
     $template   = new Template();
     $coreNLP    = new CorenlpAdapter();
+    $datastore  = new Datastore($db->conn);
     
     /**
      * Init variables
@@ -25,43 +26,24 @@
      * POST procedure
      */
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        
+        // clean up the post array
+        $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
+        // check if "clear database" checkbox is set
         if(array_key_exists("emptyDB", $_POST)){
             $db->clearAllTables();
         }
         
+        // Analyze the text
         if(!empty($_POST['text'])){
             $text = $_POST['text'];
             
-            // get the CoreNLP Adapter result
+            // runs the CoreNLP Adapter and saves result in "$coreNLP->serverMemory"
             $coreNLP->getOutput($text);
             
-            // save words
-            // get lastInsertIds for the sentences
-            $w = new Word($db->conn);
-            $sentenceIds = $w->saveWordList($coreNLP);
-         
-            // save openIE relations
-            $open = new OpenIE($db->conn);
-            $createdSentenceIds = $open->saveOpenie($coreNLP, $sentenceIds);
-                  
-        /**
-         * Process the Coreferences
-         */
-            $coref = new Coreference($db->conn);
-            $coref->storeCoreference($coreNLP, $createdSentenceIds);
-
-        /**
-         * Process the Named-Entity-Recognition (NER)
-         */
-
-            $ner = new NER($db->conn);
-            $ent = $ner->getNerEntities($coreNLP, $createdSentenceIds);
-            $ner->storeEntities($ent);
-
-            $tok = $ner->getNerTokens($coreNLP, $createdSentenceIds);
-            $ner->storeTokens($tok);           
-        
+            // Save result to database
+            $datastore->storeNLP($coreNLP);
             
         } elseif(!empty($_POST['helpButton'])){
             $helpButton = $_POST['helpButton'];

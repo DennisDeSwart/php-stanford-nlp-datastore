@@ -4,8 +4,10 @@
 Stores NLP data from Stanford CoreNLP server.
 
 
+
 ## What does it do?
-It analyses a text, gets data and then stores it.
+It analyses a text using Stanford CoreNLP server, then stores the result.
+
 
 
 ## Which data gets stored?
@@ -23,6 +25,7 @@ http://stanfordnlp.github.io/CoreNLP/coref.html
 ```
 
 
+
 ## How does it work?
 
 - You submit a text.
@@ -36,11 +39,13 @@ https://github.com/sqlitebrowser
 - There is also a search form to find data
 
 
+
 ## This package depends on Stanford CoreNLP Server
 
 ```
 http://stanfordnlp.github.io/CoreNLP/index.html#download
 ```
+
 
 ## This package also depends on PHP-Stanford-CoreNLP-Adapter
 
@@ -51,40 +56,69 @@ https://github.com/DennisDeSwart/php-stanford-corenlp-adapter
 Note: since this package contains a full version of the CoreNLP Adapter, you can use all of it's features with this package.
 
 
-## How to install the ZIP files
 
-- Install Stanford CoreNLP Server. You can find instructions on how to install in the links above
-- Unpack the files and copy them to your webserver directory.
+## Installation
+
+This package depends on these packages:
+
+```
+http://stanfordnlp.github.io/CoreNLP/index.html#download
+https://github.com/DennisDeSwart/php-stanford-corenlp-adapter
+https://github.com/doctrine/dbal
+https://github.com/guzzle/guzzle
+```
 
 
-## Install using Composer 
 
-Add the following line to the "require" section of "composer.json" and run a composer update
+## Install procedure using the ZIP files
+
+- Install Stanford CoreNLP Server. Check the "php-stanford-corenlp-adapter" package for an installation walkthrough
+- Download and unpack the files from this package.
+- Copy the files to your to your webserver directory. Usually "htdocs" or "var/www".
+- Run a Composer update to install the dependencies
+
+
+
+## Install as part of another project
+
+- Install Stanford CoreNLP Server. Check the "php-stanford-corenlp-adapter" package for an installation walkthrough
+- Add the following lines to your main project's "composer.json" require section:
 
 ```
     {
         "require": {
-            "dennis-de-swart/php-stanford-nlp-datastore": "*"
+            "dennis-de-swart/php-stanford-nlp-datastore": "*",
         }
     }
 ```
 
+- Run a Composer update to install the dependencies
+- Example code for your main project:
+```
+    // instantiate constants and the database
+    require_once __DIR__.'/bootstrap.php';
 
-Copy the following files from "vendor/dennis-de-swart/php-stanford-nlp-datastore" to your webserver folder:
-* "bootstrap.php"
-* "index.php"
-* "index.js"
-* "datastore.db"
+    // startup Corenlp Adapter
+    $coreNLP = new CorenlpAdapter();
+    $coreNLP->getOutput($yourText);
+    print_r($coreNLP->serverMemory); // result from CoreNLP Adapter
 
-After moving these files you should be able to see the form, see "datastore_result_a.PNG".
+    // Save result to database
+    $datastore->storeNLP($coreNLP);
+```
+
 
 
 ## Requirements
 - PHP 5.3 or higher: it also works on PHP 7
 - Java SE Runtime Enviroment, version 1.8
 - Stanford CoreNLP Server 3.7.0
-- PHP-Stanford-CoreNLP-Adapter => already included using Composer
 - Windows or Linux/Unix 64-bit OS, 8Gb or more memory recommended.
+- Composer for PHP
+```
+    https://getcomposer.org/
+```
+
 
 
 ## Important notes
@@ -95,6 +129,7 @@ After moving these files you should be able to see the form, see "datastore_resu
 - Also use version 3.7.0 of the server, this gives you the best and quickest results.
 
 
+
 ## Example output
 
 See 
@@ -103,6 +138,8 @@ See
 - "datastore_result_search.PNG"
 
 and "example.db", this is how a filled database looks like
+
+
 
 ## Any questions?
 

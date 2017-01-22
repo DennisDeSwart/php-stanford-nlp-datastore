@@ -15,7 +15,7 @@ class Template {
         <!DOCTYPE html>
         <html lang="en">
         <head>
-        <title>PHP NLP Summary</title>
+        <title>PHP Stanford NLP Datastore</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
