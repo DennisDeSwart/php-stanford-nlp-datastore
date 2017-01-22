@@ -87,12 +87,16 @@ https://github.com/guzzle/guzzle
 ```
     {
         "require": {
-            "dennis-de-swart/php-stanford-nlp-datastore": "*",
+            "dennis-de-swart/php-stanford-nlp-datastore": "*"
         }
     }
 ```
 
 - Run a Composer update to install the dependencies
+- Copy these files from "/vendor/dennis-de-swart/php-stanford-nlp-datastore" to your webserver directory. Usually "htdocs" or "var/www".
+* datastore.db => your data will get stored here
+* bootstrap.php => defines constants and starts up the database
+
 - Example code for your main project:
 ```
     // instantiate constants and the database
@@ -104,6 +108,7 @@ https://github.com/guzzle/guzzle
     print_r($coreNLP->serverMemory); // result from CoreNLP Adapter
 
     // Save result to database
+    $datastore = new Datastore($db->conn);
     $datastore->storeNLP($coreNLP);
 ```
 
@@ -117,6 +122,14 @@ https://github.com/guzzle/guzzle
 - Composer for PHP
 ```
     https://getcomposer.org/
+```
+
+
+## SQLite Browser
+
+If you need a SQLite browser check here:
+```
+http://sqlitebrowser.org/
 ```
 
 
