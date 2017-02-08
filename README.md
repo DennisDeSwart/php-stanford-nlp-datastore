@@ -1,10 +1,8 @@
 
 # PHP Stanford NLP Datastore
-[![Version](https://img.shields.io/packagist/v/dennis-de-swart/php-stanford-nlp-datastore.svg?style=flat-square)](https://packagist.org/packages/dennis-de-swart/php-stanford-nlp-datastore)
-[![Total Downloads](https://img.shields.io/packagist/dt/dennis-de-swart/php-stanford-nlp-datastore.svg?style=flat-square)](https://packagist.org/packages/dennis-de-swart/php-stanford-nlp-datastore)
-[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg?style=flat-square)](https://github.com/DennisDeSwart/php-stanford-nlp-datastore) 
+
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.6-4AC51C.svg?style=flat-square)](http://php.net/)
-[![License](https://img.shields.io/packagist/l/dennis-de-swart/php-stanford-nlp-datastore.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
 
 Stores NLP data from Stanford CoreNLP server.
 
@@ -122,7 +120,7 @@ Copy these files from "/vendor/dennis-de-swart/php-stanford-nlp-datastore" to yo
 
 
 ## Requirements
-- PHP 5.3 or higher: it also works on PHP 7
+- PHP 5.6 or higher: it also works on PHP 7
 - Java SE Runtime Enviroment, version 1.8
 - Stanford CoreNLP Server 3.7.0
 - Windows or Linux/Unix 64-bit OS, 8Gb or more memory recommended.
