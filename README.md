@@ -3,7 +3,7 @@
 
 [![Version](https://img.shields.io/packagist/v/dennis-de-swart/php-stanford-nlp-datastore.svg?style=flat-square)](https://packagist.org/packages/dennis-de-swart/php-stanford-nlp-datastore)
 [![Total Downloads](https://img.shields.io/packagist/dt/dennis-de-swart/php-stanford-nlp-datastore.svg?style=flat-square)](https://packagist.org/packages/dennis-de-swart/php-stanford-nlp-datastore)
-[![Maintenance](https://img.shields.io/maintenance/yes/2019.svg?style=flat-square)](https://github.com/DennisDeSwart/php-stanford-nlp-datastore) 
+[![Maintenance](https://img.shields.io/maintenance/yes/2020.svg?style=flat-square)](https://github.com/DennisDeSwart/php-stanford-nlp-datastore) 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.6-4AC51C.svg?style=flat-square)](http://php.net/)
 [![License](https://img.shields.io/packagist/l/dennis-de-swart/php-stanford-nlp-datastore.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
